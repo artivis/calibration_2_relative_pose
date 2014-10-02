@@ -14,15 +14,15 @@ clc; clear all; close all;
 %%%%%%%%%%%%%%%%%%%%%%%%%%  Define some var %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-path_to_calib_cam1 = 'proto2/left/Calib_Results.mat';
-path_to_calib_cam2 = 'proto2/right/Calib_Results.mat';
+path_to_calib_cam1 = 'calib_data/left/Calib_Results.mat';
+path_to_calib_cam2 = 'calib_data/right/Calib_Results.mat';
 path_to_calib_system = 'Results/Calib_int_ext.mat';
 
-path_to_image1 = 'proto2/left/frame0000.jpg';
-path_to_image2 = 'proto2/right/frame0000.jpg';
+path_to_image1 = 'calib_data/left/frame0000.jpg';
+path_to_image2 = 'calib_data/right/frame0000.jpg';
 
-path_to_mask1 = 'proto2/left/Img_mask1.jpg';
-path_to_mask2 = 'proto2/right/Img_mask2.jpg';
+path_to_mask1 = 'calib_data/left/Img_mask1.jpg';
+path_to_mask2 = 'calib_data/right/Img_mask2.jpg';
 
 size_pano = [1200 400];
 
@@ -68,12 +68,12 @@ image_cam2 = double(image_cam2);
 
 %%%%%% Mask %%%%%%
 
-mask1 = imread('Img_mask1.jpg');
+mask1 = imread(path_to_mask1);
 mask1 = double(mask1);
 mask1(mask1 <= 240) = 0;
 mask1(mask1 > 0) = 1;
 
-mask2 = imread('Img_mask2.jpg');
+mask2 = imread(path_to_mask2);
 mask2 = double(mask2);
 mask2(mask2 <= 240) = 0;
 mask2(mask2 > 0) = 1;

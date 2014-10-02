@@ -14,8 +14,8 @@ clc; clear all; close all;
 %%%%%%%%%%%%%%%%%%%%%%%%%%  Define some var %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-path_to_calib_cam1 = 'proto2/left/Calib_Results.mat';
-path_to_calib_cam2 = 'proto2/right/Calib_Results.mat';
+path_to_calib_cam1 = 'calib_data/left/Calib_Results.mat';
+path_to_calib_cam2 = 'calib_data/right/Calib_Results.mat';
 
 path_to_save = ['Results/'];
 
