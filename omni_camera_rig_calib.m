@@ -55,6 +55,14 @@ K_cam2 = [calib_cam2.paramEst.gammac(1) 0 calib_cam2.paramEst.cc(1);...
           0 calib_cam2.paramEst.gammac(2) calib_cam2.paramEst.cc(2);...
           0 0 1];
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Display Relative rotation only %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cam 1 is master and so origin
+Func_CameraDisplay(eye(3), [0,0,0]', 1, 1, 'b');
+% Cam 2 - apply only rotation
+Func_CameraDisplay(R_T, [0,0,0]', 1, 1, 'r');
+
 % Rearrange data
 system_calib = struct('K1', K_cam1, 'xi1', xi_cam1, ...
                       'K2', K_cam2, 'xi2', xi_cam2, ...
