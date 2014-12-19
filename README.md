@@ -1,5 +1,11 @@
-Calibration of a SpheriCam (2 fisheye cameras back-to-back) *Matlab*
+Estimate relative pose of two cameras from calibration results of Bouguet or Mei calibration toolbox
 
-Requieres Mei ToolBox :
+*Matlab*
+
+Bouguet ToolBox :
+
+http://www.vision.caltech.edu/bouguetj/calib_doc/
+
+Mei ToolBox :
 
 http://www-sop.inria.fr/icare/personnel/Christopher.Mei/ChristopherMeiPhDStudentToolbox.html/
