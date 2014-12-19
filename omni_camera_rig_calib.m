@@ -65,11 +65,13 @@ system_calib = struct('K1', K_cam1, 'xi1', xi_cam1, ...
 camera1.type = 'FishEye';
 camera1.xi = xi_cam1;
 camera1.K = K_cam1;
+camera1.pose = eye(4);
 camera1.image_size = image_cam1_size;
 
 camera2.type = 'FishEye';
 camera2.xi = xi_cam2;
 camera2.K = K_cam2;
+camera2.pose = T;
 camera2.image_size = image_cam2_size;
 
 system.extrinsicParam = T;
@@ -77,9 +79,9 @@ system.camera1 = camera1;
 system.camera2 = camera2;
 
 % Export to .mat
-save([path_to_save, 'Calib_int_ext.mat'], 'system_calib');
+%save([path_to_save, 'Calib_int_ext.mat'], 'system_calib');
 
 % Export to .yaml
 exportCalib2Yaml(camera1, path_to_save, 'intrinsicParam_cam1');
 exportCalib2Yaml(camera2, path_to_save, 'intrinsicParam_cam2');
-exportBaseline2Yaml(system, path_to_save, 'extrinsicParam');
+%exportBaseline2Yaml(system, path_to_save, 'extrinsicParam');

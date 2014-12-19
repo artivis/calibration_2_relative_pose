@@ -51,6 +51,22 @@ fprintf(fid,K);
 
 fprintf(fid,']\n\n');
 
+fprintf(fid,'pose: !!opencv-matrix\n');
+
+fprintf(fid,'   rows: %i\n',size(camera.pose,1));
+
+fprintf(fid,'   cols: %i\n',size(camera.pose,2));
+
+fprintf(fid,'   dt: d\n   data: [');
+
+pose = sprintf(' %.8g, ',camera.pose');
+
+pose(end-1) = [];
+
+fprintf(fid,pose);
+
+fprintf(fid,']\n\n');
+
 fprintf(fid,'image_size:\n');
 
 fprintf(fid,'   rows: %i\n',camera.image_size(1));
