@@ -23,7 +23,7 @@
 %%%%%%%%%%%% Author : Deray Jeremie 
 %%%%%%%%%%%% Date : 01/7/2014
 
-function [T, R_T, t_T] = calcBaseLine(calib_cam1, calib_cam2)
+function [T, R_T, t_T] = calcBaseLineMei(calib_cam1, calib_cam2)
 
 if (calib_cam1.images_without_I.n_ima ~= calib_cam2.images_without_I.n_ima)
     error('Must have the same number of calibration images for each camera');

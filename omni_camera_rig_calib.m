@@ -36,7 +36,7 @@ calib_cam1 = load(path_to_calib_cam1); %Load Mei calib results
 calib_cam2 = load(path_to_calib_cam2);
 
 % Compute baseline
-[T, R_T, t_T] = calcBaseLine(calib_cam1, calib_cam2);
+[T, R_T, t_T] = calcBaseLineMei(calib_cam1, calib_cam2);
 
 % Retrieve cameras calibration information
 image_cam1_size = [calib_cam1.images_without_I.ny calib_cam1.images_without_I.nx];
@@ -83,5 +83,3 @@ save([path_to_save, 'Calib_int_ext.mat'], 'system_calib');
 exportCalib2Yaml(camera1, path_to_save, 'intrinsicParam_cam1');
 exportCalib2Yaml(camera2, path_to_save, 'intrinsicParam_cam2');
 exportBaseline2Yaml(system, path_to_save, 'extrinsicParam');
-
-
